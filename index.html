@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب جديد</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="login-container">
+        <header class="login-header">
+            <h2>إنشاء حساب جديد</h2>
+            <p>انضم إلينا اليوم وابدأ تجربتك</p>
+        </header>
+
+        <form class="login-form" id="registerForm">
+            <div class="form-group">
+                <label for="fullName">الاسم الكامل</label>
+                <input type="text" id="fullName" name="fullName" placeholder="أدخل اسمك الثلاثي" required autocomplete="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com" required autocomplete="email">
+            </div>
+
+            <div class="form-group">
+                <label for="newPassword">كلمة المرور</label>
+                <input type="password" id="newPassword" name="password" placeholder="اختر كلمة مرور قوية" required minlength="8" autocomplete="new-password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">تأكيد كلمة المرور</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="أعد كتابة كلمة المرور" required minlength="8" autocomplete="new-password">
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="agreeTerms" name="agreeTerms" required>
+                <label for="agreeTerms">أوافق على <a href="#" id="openTerms">الشروط والأحكام</a> وسياسة الخصوصية</label>
+            </div>
+
+            <button type="submit" class="btn-submit">تسجيل حساب جديد</button>
+        </form>
+
+        <footer class="login-footer">
+            <p>لديك حساب بالفعل؟ <a href="index.html">تسجيل الدخول</a></p>
+        </footer>
+    </main>
+
+    <div id="termsModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-btn" id="closeTerms">&times;</span>
+            <h3>📜 الشروط والأحكام</h3>
+            <ul class="terms-list">
+                <li>يجب إدخال معلومات حقيقية وصحيحة أثناء إنشاء الحساب.</li>
+                <li>الحساب شخصي ولا يجوز مشاركة بيانات الدخول مع مستخدمين آخرين.</li>
+                <li>نحن نحافظ على خصوصية بياناتك ولا نشاركها مع أي جهات خارجية.</li>
+                <li>يحق لإدارة الموقع إيقاف الحسابات المخالفة لشروط الاستخدام.</li>
+                <li>باستخدامك للموقع، فإنك توافق على استقبال رسائل تفعيل وتنبيهات برمجية على بريدك.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+
+</body>
+</html>
